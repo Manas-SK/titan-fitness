@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f0f0f;
+  font-family: 'Arial';
   color: white;
+  background: #0a0a0a;
 }
 
 /* NAVBAR */
@@ -10,69 +10,54 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  background: #111;
+  padding: 18px 40px;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
 }
 
 .nav-links a {
-  margin: 0 10px;
-  color: white;
+  margin: 0 12px;
+  color: #ddd;
   text-decoration: none;
 }
 
-.join-btn {
-  background: red;
-  border: none;
-  padding: 10px 15px;
-  color: white;
-  cursor: pointer;
-}
-
-/* HERO */
+/* HERO (IMPORTANT UPGRADE) */
 .hero {
+  height: 90vh;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 60px;
-  min-height: 90vh;
-  background: linear-gradient(to right, #000, #1a1a1a);
-}
-
-.hero-content {
-  max-width: 50%;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438");
+  background-size: cover;
+  background-position: center;
 }
 
 .hero h1 {
   font-size: 3rem;
 }
 
-.hero-img {
-  width: 45%;
-  border-radius: 15px;
+.hero p {
+  color: #aaa;
 }
 
 /* BUTTONS */
-.hero-buttons button,
-.primary-btn,
-.secondary-btn {
-  margin: 10px;
+.primary-btn {
+  background: linear-gradient(45deg, red, orange);
   padding: 12px 20px;
   border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.primary-btn {
-  background: red;
+  border-radius: 8px;
   color: white;
+  cursor: pointer;
 }
 
 .secondary-btn {
+  border: 1px solid #555;
+  padding: 12px 20px;
   background: transparent;
-  border: 1px solid white;
   color: white;
 }
 
@@ -86,29 +71,67 @@ body {
   background: #111;
 }
 
+/* GRID */
 .grid {
   display: flex;
-  justify-content: center;
   gap: 20px;
+  justify-content: center;
   flex-wrap: wrap;
-  margin-top: 30px;
 }
 
-/* CARDS */
+/* CARD (IMPORTANT UPGRADE) */
 .card {
-  background: #222;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
   padding: 20px;
-  width: 220px;
-  border-radius: 10px;
+  border-radius: 14px;
+  width: 240px;
+  transition: 0.3s;
 }
 
-.highlight {
-  border: 2px solid red;
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+}
+
+.modal input {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* JOIN BUTTON */
+.join-btn {
+  background: linear-gradient(45deg, red, orange);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
 }
 
 /* FOOTER */
 .footer {
   text-align: center;
   padding: 20px;
-  background: #000;
+  background: black;
 }
